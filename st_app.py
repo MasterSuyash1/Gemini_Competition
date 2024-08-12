@@ -314,7 +314,7 @@ def main():
             with st.chat_message("AI"):
                 st.markdown(message.content)
         elif isinstance(message, HumanMessage):
-            with st.chat_message("Human"):
+            with st.chat_message("Human",avatar=st.image("user (1).png")):
                 st.markdown(message.content)
 
     user_ques = st.chat_input(placeholder="Ask me anything about your Document/Video.")
@@ -348,7 +348,7 @@ def main():
         st.session_state.chat_history.append(HumanMessage(content=user_ques))
         print(st.session_state.chat_history)
 
-        with st.chat_message("Human"):
+        with st.chat_message("Human",avatar=st.image("user (1).png")):
             st.markdown(user_ques)
 
         with st.chat_message("AI"):
