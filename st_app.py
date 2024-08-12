@@ -346,7 +346,7 @@ def main():
     if user_ques is not None and user_ques.strip() != "":
         print(user_ques)
         st.session_state.chat_history.append(HumanMessage(content=user_ques))
-        print(st.session_state.chat_history)
+        # print(st.session_state.chat_history)
 
         with st.chat_message("Human"):
             st.markdown(user_ques)
