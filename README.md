@@ -7,9 +7,9 @@ The application utilizes Google Generative AI embeddings and FAISS for vector em
 
 We are **Neural Ninjas**, a team of dedicated AI enthusiasts committed to creating innovative solutions. Our team members are:
 
-- **[Suyash Srivastav](22f1001215@ds.study.iitm.ac.in)**
-- **[Swetha Suravajjula](swethasuravajjula123@gmail.com)**
-- **[Yadvendra Garg](yadvendragarg123@gmail.com)**
+- **[Suyash Srivastav](https://github.com/MasterSuyash1)**
+- **[Swetha Suravajjula](https://github.com/swetha-suravajjula)**
+- **[Yadvendra Garg](https://github.com/agi-yads)**
 
 Together, we are working to bring you DocuVid Genie, an advanced app designed to enhance your interaction with PDFs and videos using state-of-the-art AI technology
 
