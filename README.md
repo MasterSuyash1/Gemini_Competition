@@ -3,6 +3,16 @@
 This is a Streamlit-based web application that allows users to interact with their PDF documents or YouTube videos by asking questions and receiving AI-generated responses. 
 The application utilizes Google Generative AI embeddings and FAISS for vector embeddings to provide detailed and accurate answers based on the context of the documents or videos.
 
+## Team
+
+We are **Neural Ninjas**, a team of dedicated AI enthusiasts committed to creating innovative solutions. Our team members are:
+
+- **[Suyash Srivastav](22f1001215@ds.study.iitm.ac.in)**
+- **[Swetha Suravajjula](swethasuravajjula123@gmail.com)**
+- **[Yadvendra Garg](yadvendragarg123@gmail.com)**
+
+Together, we are working to bring you DocuVid Genie, an advanced app designed to enhance your interaction with PDFs and videos using state-of-the-art AI technology
+
 ## Features
 
 - **Upload PDF Files**: Users can upload one or more PDF documents to be analyzed by the AI assistant.
