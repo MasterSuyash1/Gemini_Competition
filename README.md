@@ -1,4 +1,4 @@
-# [DocuVid Genie](https://chat-with-ai-content.streamlit.app/)
+# DocuVid Genie
 
 This is a Streamlit-based web application that allows users to interact with their PDF documents or YouTube videos by asking questions and receiving AI-generated responses. 
 The application utilizes Google Generative AI embeddings and FAISS for vector embeddings to provide detailed and accurate answers based on the context of the documents or videos.
