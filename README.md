@@ -5,7 +5,7 @@ The application utilizes Google Generative AI embeddings and FAISS for vector em
 
 ## Team
 
-We are **Neural Ninjas**, a team of dedicated AI enthusiasts committed to creating innovative solutions. Our team members are:
+We are **NeuralNinjas**, a team of dedicated AI enthusiasts committed to creating innovative solutions. Our team members are:
 
 - **[Suyash Srivastav](https://github.com/MasterSuyash1)**
 - **[Swetha Suravajjula](https://github.com/swetha-suravajjula)**
