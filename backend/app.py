@@ -193,13 +193,13 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 
 def main():
-    st.set_page_config("Chat With Multiple PDFs")
+    st.set_page_config("Chat With Multiple PDFs", page_icon="favicon.ico")
 
     st.header("Chat with PDFs")
 
     with st.sidebar:
         st.title("Set Up:")
-        pdf_docs = st.file_uploader("Upload your PDF Files and Click on Submit & Process", accept_multiple_files=True)
+        pdf_docs = st.file_uploader("Upload your PDF Files and Click on Analyze The PDFs", accept_multiple_files=True)
         want_suggested_questions = st.toggle(label="Suggested Questions")
         num_of_ques = 0
         if want_suggested_questions:
