@@ -11,10 +11,8 @@ import google.generativeai as genai
 from google.generativeai import GenerationConfig, GenerativeModel
 from langchain_community.vectorstores import FAISS  # For Vector Embeddings
 from langchain_google_genai import ChatGoogleGenerativeAI
-# from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-# from langchain_core.runnables import RunnablePassthrough
 from langchain_core.messages import AIMessage, HumanMessage
 from dotenv import load_dotenv
 
@@ -346,7 +344,7 @@ def main():
     if user_ques is not None and user_ques.strip() != "":
         print(user_ques)
         st.session_state.chat_history.append(HumanMessage(content=user_ques))
-        print(st.session_state.chat_history)
+        # print(st.session_state.chat_history)
 
         with st.chat_message("Human", avatar="🙋‍♂️"):
             st.markdown(user_ques)
