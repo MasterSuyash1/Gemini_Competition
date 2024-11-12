@@ -201,27 +201,26 @@ def generate_suggested_questions(description, num_ques):
         return None
 
 
-if "chat_history" not in st.session_state:
-    st.session_state.chat_history = [
-        AIMessage(content="Hi There, I'm Chat with Documents or Video AI Assistant. Ask me anything about your Documents/Video."),
-    ]
-
-if 'sq_response' not in st.session_state:
-    st.session_state.sq_response = None
-if 'analyzed_video' not in st.session_state:
-    st.session_state.analyzed_video = False
-if 'num_sq' not in st.session_state:
-    st.session_state.num_sq = 0
-
 load_dotenv()
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 
 def main():
-    st.set_page_config("Chat With Multiple PDFs or Video")
+    if "chat_history" not in st.session_state:
+        st.session_state.chat_history = [
+            AIMessage(
+                content="Hi There, I'm Chat with Documents or Video AI Assistant. Ask me anything about your Documents/Video."),
+        ]
 
-    st.title("Chat with PDFs or Video")
+    if 'sq_response' not in st.session_state:
+        st.session_state.sq_response = None
+    if 'analyzed_video' not in st.session_state:
+        st.session_state.analyzed_video = False
+    if 'num_sq' not in st.session_state:
+        st.session_state.num_sq = 0
+
+    st.set_page_config("Chat With Multiple PDFs or Video", layout="wide")
 
     with st.sidebar:
         st.title("Set Up:")
@@ -247,7 +246,7 @@ def main():
         want_suggested_questions = st.toggle(label="Suggested Questions")
         num_of_ques = 0
         if want_suggested_questions:
-            num_of_ques = st.slider(label="Number of Suggested Questions", min_value=0, max_value=15, value=0)
+            num_of_ques = st.slider(label="Number of Suggested Questions", min_value=0, max_value=20, value=0)
         # print(len(pdf_docs.read()))
         if st.button("Analyze"):
             if pdf_docs:
@@ -309,6 +308,8 @@ def main():
             sq_response = generate_suggested_questions(description=desc_res, num_ques=num_of_ques)
             st.session_state.sq_response = sq_response
 
+    st.title("Chat with PDFs or Video")
+
     for message in st.session_state.chat_history:
         if isinstance(message, AIMessage):
             with st.chat_message("AI", ):
@@ -344,7 +345,7 @@ def main():
                 user_ques = selected_ques
 
     if user_ques is not None and user_ques.strip() != "":
-        print(user_ques)
+        # print(user_ques)
         st.session_state.chat_history.append(HumanMessage(content=user_ques))
         # print(st.session_state.chat_history)
 
@@ -357,7 +358,7 @@ def main():
                     user_question=user_ques,
                     chat_history=st.session_state.chat_history
                 )
-                print(response)
+                # print(response)
                 if response is not None:
                     st.markdown(response)
                     st.session_state.chat_history.append(AIMessage(content=response))
